@@ -18,7 +18,8 @@ import java.awt.event.ActionListener;
 import java.awt.BorderLayout;
 /**
  *
- * @author Carlos
+ * @author Jorge Duran
+ * @author Albert Charry
  */
 public class Ventana extends JFrame implements ActionListener {
     private JPanel panelImagen;
@@ -31,18 +32,13 @@ public class Ventana extends JFrame implements ActionListener {
     
     
     public Ventana() {
-        /*
-        JToolBar permite que lo arrastremos 
-        con el ratón para colocarlo en otra parte 
-        de la ventana de nuestra aplicación o incluso 
-        que quede flotando en una ventana propia.
-        */
+        
         JToolBar barra = new JToolBar();
                 
-	leeFilas = new JLabel();//  Creea el especaio para escribir el cadean de caracteres
-	leeColumnas= new JLabel();
-	Filas = new JTextField(); // texto de la cadena la cadea
-	Columnas = new JTextField(); // texto de la cadena de caracteres
+	leeFilas = new JLabel();//  Crea el cuadro para las filas
+	leeColumnas= new JLabel();//  Crea el cuadro para las columnas
+	Filas = new JTextField(); //  Crea el espacio para introducir los datos de filas
+	Columnas = new JTextField(); //  Crea el espacio para introducir los datos de columnas
 		
 	panel = new JPanel( null );
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -55,22 +51,22 @@ public class Ventana extends JFrame implements ActionListener {
         
         leeFilas.setText("Filas");
 	barra.add(leeFilas);
-	Filas.setPreferredSize(new Dimension(250, 25));// tamaño del espacio para poder escribir
+	Filas.setPreferredSize(new Dimension(250, 25));// tamaño del cuadro para el ingreso de datos en filas
 	barra.add(Filas);
 
         leeColumnas.setText("Columnas");
 	barra.add(leeColumnas);
 
-	Columnas.setPreferredSize(new Dimension(250, 25));// tamaño del espacio para poder escribir
+	Columnas.setPreferredSize(new Dimension(250, 25));// tamaño del caudro para el ingreso de datos en columnas
 	barra.add(Columnas);
 	Crear = new JButton("CREAR");
 	Crear.addActionListener(this);
         barra.add(Crear);
 	this.add(barra, BorderLayout.PAGE_END);//Colocamos el JToolBar en la parte de abajo del JFrame
-        this.add(panel, BorderLayout.CENTER);//Se agrega el panel a boton
+        this.add(panel, BorderLayout.CENTER);//Se agrega el panel a boton en el centro
         this.setSize(1000, 600); //tamaño de la pantalla
 	this.setLocationRelativeTo(null);//Permite que la ventana se coloque al centro de la pantalla
-        setVisible(true);
+        setVisible(true);//la hace visible
 
     }
     

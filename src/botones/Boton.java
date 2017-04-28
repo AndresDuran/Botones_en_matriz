@@ -10,13 +10,15 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 /**
  *
- * @author Carlos
+ * @author Jorge Duran
+ * @author Albert Charry
  */
 public class Boton extends JButton implements ActionListener {     
-    //Constructor con parametros para posicionar a los botones
+    //constructor que contiene las coordenadas para el posicionamiento de los botones
     public Boton( int posx, int posy, int ancho, int alto ){ 
-        
-        setBounds(posx, posy, ancho, alto);//Se coloca el boton en un lugar y se le da un tamanio
+        //se ubica el boton y se le da un tamaño
+        setBounds(posx, posy, ancho, alto);
+        //se le asigna un color
         setBackground(java.awt.Color.WHITE);
         
         addActionListener( this );//Se agrega el action listener en este caso la misma clase
@@ -24,8 +26,8 @@ public class Boton extends JButton implements ActionListener {
   
     // Cambio de color de los botones creados
     public void actionPerformed( ActionEvent e ){
-        
-        setBackground(Color.BLUE);//Se asigna el color de fondo 
+        //se asigna el negro al momento de darle click
+        setBackground(Color.BLACK);
       
     }
 }

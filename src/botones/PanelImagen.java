@@ -15,14 +15,16 @@ import javax.swing.border.LineBorder;
 
 /**
  *
- * @author Carlos
+ * @author Jorge Duran
+ * @author Albert Charry
  */
 public class PanelImagen extends JPanel{
     
     private JLabel etiquetaImagen;
     
     public PanelImagen() {
-        setBackground(Color.white);
+        //crea carga y muestra la imagen del logo de la Universidad con los nombres
+        setBackground(Color.WHITE);
         setBorder(new LineBorder (Color.GRAY));
         ImageIcon icon = new ImageIcon("imagenes/logo.JPG");
         etiquetaImagen = new JLabel();
